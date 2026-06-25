@@ -10,18 +10,16 @@ export class PriorityInbox {
   }
 
   addNotification(notification) {
-    if (notification.read) {
-      // skip read notifications since we only care about unread
-      logger.debug('Skipping read notification', { id: notification.id });
-      return;
-    }
-
     // check if we already have this exact notification to prevent duplicates
     if (this.notifications.some(n => n.id === notification.id)) {
       return;
     }
 
-    const score = calculatePriorityScore(notification);
+    let score = calculatePriorityScore(notification);
+    // heavily penalize read notifications so they always appear below unread ones
+    if (notification.read) {
+      score -= 1000; 
+    }
     const item = { ...notification, score };
 
     this.notifications.push(item);
