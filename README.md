@@ -17,3 +17,7 @@ This repository contains the Priority Inbox feature for the Campus Notification 
    ```
 
 *(Work in progress...)*
+
+## Stage 1 Features
+- **Priority Scoring:** placement > result > event, combined with a decay-based recency score.
+- **Custom Logging Middleware:** Extensively used across scoring handling.
