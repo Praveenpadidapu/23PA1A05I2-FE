@@ -23,3 +23,6 @@ This repository contains the Priority Inbox feature for the Campus Notification 
 - **Custom Logging Middleware:** Extensively used across scoring handling.
 
 - **Top 10 Array Ranking:** Efficient top 10 bounds maintenance without heavy full heap logic.
+
+- **Streaming Updates:** Dynamic continuous fetch logic integrated directly with React Hooks.
+- **User Interface:** Material UI implemented for a clean, deterministic Priority Inbox view.
