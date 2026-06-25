@@ -26,3 +26,7 @@ This repository contains the Priority Inbox feature for the Campus Notification 
 
 - **Streaming Updates:** Dynamic continuous fetch logic integrated directly with React Hooks.
 - **User Interface:** Material UI implemented for a clean, deterministic Priority Inbox view.
+
+## Screenshots & Documentation
+- Please refer to the `screenshots/` directory for visual output of the application prioritizing the notifications correctly.
+- Check out `Notification_System_Design.md` for a complete system design breakdown detailing Time and Space complexity, assumption checks, and data structure choices.
