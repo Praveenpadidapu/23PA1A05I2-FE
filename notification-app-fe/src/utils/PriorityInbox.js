@@ -16,6 +16,11 @@ export class PriorityInbox {
       return;
     }
 
+    // check if we already have this exact notification to prevent duplicates
+    if (this.notifications.some(n => n.id === notification.id)) {
+      return;
+    }
+
     const score = calculatePriorityScore(notification);
     const item = { ...notification, score };
 
